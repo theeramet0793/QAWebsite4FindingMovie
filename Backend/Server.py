@@ -5,14 +5,15 @@ from flask_restful import Api, Resource
 from flask_cors import CORS
 import json
 import collections
-from backend.ClassGetAllComment import GetAllComment
-from backend.ClassGetAllPost import GetAllPost
-from backend.ClassGetAllSolvedPost import GetAllSolvedPost
-from backend.ClassGetAllUnsolvePost import GetAllUnsolvedPost
+from ClassGetAllComment import GetAllComment
 
-from backend.ClassGetMovieName import GetMovieName
-from backend.ClassGetSomeComment import GetSomeComment
-from backend.ClassGetSomePost import GetSomePost
+from ClassGetAllPost import GetAllPost
+from ClassGetAllSolvedPost import GetAllSolvedPost
+from ClassGetAllUnsolvePost import GetAllUnsolvedPost
+
+from ClassGetMovieName import GetMovieName
+from ClassGetSomeComment import GetSomeComment
+from ClassGetSomePost import GetSomePost
 
 
 
