@@ -1,0 +1,31 @@
+import collections
+import json
+from flask_restful import Resource
+import pymysql
+
+
+class GetMovieName(Resource):
+    def get(self,postID): 
+        #connect to database
+        conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
+        myCursor = conn.cursor()
+        myCursor.execute("SELECT * FROM moviename WHERE PID = %s",postID)
+        getsomepost = myCursor.fetchall()
+        conn.commit()
+        conn.close()
+         #convert python object to json for post
+        rowarray_list = []
+        for row in getsomepost:
+            t = (row[0],row[1],row[2])
+            rowarray_list.append(t)
+        j = json.dumps(rowarray_list)
+
+        object_list = []
+        for row in getsomepost:
+            d = collections.OrderedDict()
+            d['id'] = row[0]
+            d['PID'] = row[1]
+            d['movieName'] = row[2]
+            object_list.append(d)
+        j = json.dumps(object_list)
+        return json.loads(j)
