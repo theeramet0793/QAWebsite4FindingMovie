@@ -22,8 +22,12 @@ const SolvedPosts = () =>{
             }
 
             function resizeComArea(index){
-              var commentArea = document.querySelector(".comment-area")
-              commentArea.addEventListener('input', autoResize, false);
+                var   commentArea = document.querySelectorAll(".comment-area")
+                commentArea.forEach(element => 
+                    {
+                        element.addEventListener('input', autoResize, false);
+                    });
+          commentArea.addEventListener('input', autoResize, false);
             }
 
             function deleteComment(cid){
@@ -117,6 +121,7 @@ const SolvedPosts = () =>{
                         var btnMovieName = document.createElement('button')
                         
 
+                        btnDel.className = 'btn-delete'
                         divPost.className = 'post' 
                         divDetail.className = 'post-detail'
                         divPoster.className = 'poster'

@@ -1,0 +1,68 @@
+
+
+div.test {
+  margin-top: 90px;
+}
+
+div.test div.container {
+  padding: 16px;
+}
+
+div.test div.container hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+div.test div.container div.container2 input.signUp-email{
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  background-color: #ddd;
+  outline: none;
+}
+
+div.test div.container div.container3 input.signUp-password{
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  background-color: #ddd;
+  outline: none;
+}
+
+div.test div.container div.container4 input.signUp-repeatPassword{
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  background-color: #ddd;
+  outline: none;
+}
+
+div.test div.container div.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+div.test div.container div.clearfix button.cancelbtn {
+    padding: 14px 20px;
+    background-color: rgba(249,49,84,255);
+    float: left;
+    width: 50%;
+}
+
+div.test div.container div.clearfix button.signupbtn {
+    padding: 14px 20px;
+    background-color: rgba(0,183,74,255);
+    float: left;
+    width: 50%;
+}
+  
+
+
+  

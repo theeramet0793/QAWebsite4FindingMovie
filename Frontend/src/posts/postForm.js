@@ -21,12 +21,14 @@ const PostForm = () => {
 
     return (
         <div className="postForm">
+           
                 <form className="form-post" >
-                    <div>
+                    <div className="area-space">
                         <textarea value={value.text} className="inputForm"  type="text" name="postform" onChange={handleTextInputChange}    />
                     </div>
                     <button className="btn-inputForm" type="submit" onClick={btnClick} >POST NOW</button>
                 </form>
+            
         </div>
     )
 }

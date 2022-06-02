@@ -1,35 +1,63 @@
-import {Nav,Navbar, NavDropdown} from 'react-bootstrap'
+import { Nav,Navbar, NavDropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+import { Dropdown } from 'bootstrap';
 
 const NavBar = () => {
     return (
+      
         <div>
-           <Navbar className="navBar"  fixed="top"  expand="lg" bg="light" variant="light">
-             <Navbar.Brand>
-               <img src="/logo512.png" height="40" width="40"></img>
-              Logo
-             </Navbar.Brand>
-              <Navbar.Toggle/>
-              <Navbar.Collapse>
-                <Nav className="nav">
-                <NavDropdown title="page0">
-                  <NavDropdown.Item href="/page1/something1">sth 1</NavDropdown.Item>
-                  <NavDropdown.Item href="/page1/something2">sth 2</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/page1/something3">sth 3</NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="/page1">Page1</Nav.Link>
-                <Nav.Link href="/page2">Page2</Nav.Link>
-                <Nav.Link href="/page3">Page3</Nav.Link>
-                <Nav.Link href="/solvedPost">SolvedPost</Nav.Link>
-                <Nav.Link href="/posts">Posts</Nav.Link>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="text" placeholder="Search"/>
-                  <button class="btn btn-success" type="button">Search</button>
-                </form>
-              </Nav>
-              </Navbar.Collapse>
-           </Navbar>
+           <nav class="navbar fixed-top navbar-expand-lg ">
+              <img className="website-logo-image" src="/logo512.png" height="40" width="40" alt="logo"></img>
+              <a class="navbar-brand" href="http://"> 
+                    Find Movies
+              </a>
+                
+              <div class="collapse navbar-collapse">
+
+                  <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link " href="/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="/page2">Page2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="/page3">Page3</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/solvedPost">Solved</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/posts">Unsolved</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                </ul>
+
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="text" placeholder="Search"/>
+                      <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+
+                    <div class="dropdown show ">
+                     
+                      <button class="btn btn-outline-secondary dropdown-toggle " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/image/profile.jpg" className="profile-image"/>
+                      </button>
+                      
+                      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Edit profile</a></li>
+                        <li><a class="dropdown-item" href="#">Setting</a></li>
+                        <li><hr class="dropdown-divider"></hr></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                      </ul>
+                    </div>
+                
+                  
+                </div>
+                
+           </nav>
            
         </div>
       );

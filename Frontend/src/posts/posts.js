@@ -43,7 +43,11 @@ const Posts = () =>{
             function resizeComArea(index){
               //comAreaID
             
-              var commentArea = document.querySelector(".comment-area")
+              var   commentArea = document.querySelectorAll(".comment-area")
+                    commentArea.forEach(element => 
+                        {
+                            element.addEventListener('input', autoResize, false);
+                        });
               commentArea.addEventListener('input', autoResize, false);
 
             }
@@ -140,6 +144,7 @@ const Posts = () =>{
                         var btnInputNameComfirm = document.createElement('button')
                         
 
+                        btnDel.className = 'btn-delete'
                         divPost.className = 'post' 
                         divDetail.className = 'post-detail'
                         divPoster.className = 'poster'
@@ -260,7 +265,9 @@ const Posts = () =>{
 
     return(
         <div className="post-page">
-            <PostForm />
+            <div className="postform-area">
+                <PostForm />
+            </div>
             <div className="allPost"></div>
         </div>
     )
