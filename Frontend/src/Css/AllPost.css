@@ -1,0 +1,126 @@
+
+.Post{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 2rem;
+    padding: 2%;
+}
+
+
+
+div.post-body{
+    /* background-color: rgb(247, 92, 92); */
+    padding: 2%;
+}
+
+div.post-footer{
+    display: flex;
+    /* background-color: rgb(243, 249, 70); */
+    padding: 2%;
+}
+
+
+
+div.post-header-name{
+    width: 85%;
+}
+
+div.post-header-icon{
+    width: 5%;
+}
+
+button.post-btn-moremenu{
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+}
+
+img#post-moremenu-icon{
+    width: 15px;
+    height: 15px;
+}
+
+div.post-user-name{
+    font-size: large;
+}
+
+div.post-date{
+    font-size: small;
+}
+
+
+
+div.post-postdetail-container{
+    border-radius: 5px;
+    border-color: rgb(205, 207, 208);
+}
+
+div.post-footer-sortby{
+    /* background-color: coral; */
+    width: 20%;
+}
+
+div.post-footer-countcomment{
+    display: flex;
+    /* background-color: rgb(80, 205, 255); */
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post-footer-followpost{
+    display: flex;
+    /* background-color: rgb(80, 255, 133); */
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.post-footer-hide{
+    display: flex;
+    /* background-color: rgb(255, 80, 214); */
+    width: 35%;
+    justify-content: right;
+    align-items: center;
+}
+
+img.post-img-comment-icon{
+    width: 20px;
+    height: 20px;
+}
+
+img.post-img-follow-icon{
+    width: 17px;
+    height: 17px;
+}
+
+img.post-img-hide-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.btn-hide-comment{
+    height: 36px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(207, 208, 208);
+    border-width: 1px;
+}
+
+.btn-follow-post{
+    height: 36px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(207, 208, 208);
+    border-width: 1px;
+}
+
+.count-comment{
+    height: 36px;
+    background-color: white;
+    border-radius: 3px;
+    border-color: rgb(207, 208, 208);
+    border-width: 1px;
+}

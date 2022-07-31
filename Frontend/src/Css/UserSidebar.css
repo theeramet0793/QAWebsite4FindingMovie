@@ -1,0 +1,26 @@
+
+div.Sidebar-page{
+    height: 96vh;
+    background-color:#ffffff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+}
+
+div#sidebar-container{
+    height: 100%;
+    background-color: rgba(255,255,255,255);
+}
+
+ul#unlist-left-sidebar{
+    list-style-type: none;
+    padding-left: 8rem;
+}
+
+li#list-left-sidebar{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+

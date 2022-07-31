@@ -1,113 +1,54 @@
-#server side
-import pymysql
-from flask import Flask, request
-from flask_restful import Api, Resource
-from flask_cors import CORS
-import json
-import collections
 
+#server side
+from flask import Flask
+from flask_restful import Api
+from flask_cors import CORS
+
+# Class method GET
 from ClassGetAllComment import GetAllComment
 from ClassGetAllPost import GetAllPost
 from ClassGetAllSolvedPost import GetAllSolvedPost
 from ClassGetAllUnsolvePost import GetAllUnsolvedPost
 from ClassGetMovieName import GetMovieName
-from ClassGetSomeComment import GetSomeComment
+from ClassGetComment import GetComment
 from ClassGetSomePost import GetSomePost
 
+# Class method POST
+from ClassPostAddPostByUser import AddPostByUser
+from ClassPostAddCommentByUser import AddCommentByUser
+from ClassPostDeletePost import DeletePost
+from ClassPostDeleteComment import DeleteComment
+from ClassPostUpdatePost import UpdatePost
+from ClassPostFoundMovieName import FoundMovieName
+from ClassPostSignUp import SignUp
+from ClassPostSignIn import SignIn
 
-"""
-#connect to database
-conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-myCursor = conn.cursor()
-myCursor.execute("SELECT * FROM post ")
-getAllpost = myCursor.fetchall()
-myCursor.execute("SELECT * FROM comment")
-getAllcomment = myCursor.fetchall()
-conn.commit()
-conn.close()
-"""
 #===================================================================
 #design resource
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
-@app.route("/")
+secretKey = "questionandanswerwebsiteforfindingmovie";
 
-@app.route('/postByUser', methods=['POST'])
-def process_json1():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("INSERT INTO post(post, poster, date) VALUES (%s, %s, %s); ",(data['text'],data['poster'],data['date']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
 
-@app.route('/commentByUser', methods=['POST'])
-def process_json4():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("INSERT INTO comment(PID, body, userID, userName, createdAt) VALUES (%s, %s, %s, %s, %s); ",(data['pid'],data['body'],data['userID'],data['userName'],data['date']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
-
-@app.route('/deletePost', methods=['POST'])
-def process_json2():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("DELETE FROM post WHERE id = %s; ",(data['Pid']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
-
-@app.route('/deleteComment', methods=['POST'])
-def process_json5():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("DELETE FROM comment WHERE cid = %s; ",(data['cid']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
-
-@app.route('/updatePost', methods=['POST'])
-def process_json3():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("UPDATE post SET  post = %s, poster = %s, date =%s WHERE id = %s; ",(data['post'],data['poster'],data['date'],data['pid']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
-
-@app.route('/foundMovieName', methods=['POST'])
-def process_json6():
-    data = json.loads(request.data)
-    print(data)
-    conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-    myCursor = conn.cursor()
-    myCursor.execute("INSERT INTO moviename(PID, movieName) VALUES (%s, %s); ",(data['PID'],data['movieName']))
-    conn.commit()
-    conn.close()  
-    return 'Recieved'
-
-    
-# API
+# API GET
 api.add_resource(GetAllPost,"/GetAllPost")
 api.add_resource(GetAllSolvedPost,"/GetAllPostSolve")
 api.add_resource(GetAllUnsolvedPost,"/GetAllPostUnsolve")
 api.add_resource(GetAllComment,"/GetAllComment")
-api.add_resource(GetSomeComment,"/GetSomeComment/<int:postID>")
+api.add_resource(GetComment,"/GetComment/<int:postId>")
 api.add_resource(GetSomePost,"/GetSomePost/<int:postID>")
 api.add_resource(GetMovieName,"/GetMovieName/<int:postID>")
+
+# API POST
+api.add_resource(AddPostByUser,"/PostByUser")
+api.add_resource(AddCommentByUser,"/CommentByUser")
+api.add_resource(DeletePost,"/DeletePost")
+api.add_resource(DeleteComment,"/DeleteComment")
+api.add_resource(UpdatePost,"/UpdatePost")
+api.add_resource(FoundMovieName,"/FoundMovieName")
+api.add_resource(SignUp,"/SignUp")
+api.add_resource(SignIn,"/SignIn")
 
 if __name__ == "__main__":
     app.run(debug=True)

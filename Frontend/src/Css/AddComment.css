@@ -1,0 +1,18 @@
+
+.write-comment-container{
+   background-color: white;
+}
+
+.text-area-comment{
+    width: 100%;
+    display: flex;
+}
+
+.write-comment{
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    height: 35px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+    margin: auto;
+}

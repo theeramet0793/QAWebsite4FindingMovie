@@ -1,0 +1,181 @@
+
+
+  div.cover-span2{
+    margin-top: 10px ;
+  }
+
+ div.allPost{
+  margin: auto;
+  width: 100%;
+ }
+
+ div.post {
+    padding: 5px;
+    margin: auto;
+    margin-left: 0px;
+    margin-top: 3%;
+    margin-bottom:10px;
+    padding-top: 1%;
+    width: 100%;
+    background: rgba(255,255,255,1);
+    box-shadow: rgba(111, 115, 119, 0.4) 0px 8px 24px;
+    border-radius: 15px;
+    
+  }
+
+   div.post-detail {  
+    padding: 5px;
+    margin: auto;
+    width: 80%;
+    border-radius: 6px;
+    background-color: #accbff;
+  }
+
+  div.dtail-poster {
+    margin: auto;
+    width: 90%;
+  }
+
+  span.poster {
+    font-size: 12px;
+  }
+
+   textarea.comment-area{
+    margin-top: 2%;
+    height: 30px;
+    margin-left: 20%;
+    width: 70%;
+    font-size: 15px;
+    overflow: hidden;
+    border-radius: 9px;
+    border: none;
+    padding-left: 10px;
+    background-color: rgba(245,245,245,255);
+   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;*/
+  }
+
+  textarea.comment-area:focus{
+    outline: none;
+  }
+
+
+  button#btn-Comment{
+    font-size:15px;
+    width: 25%;
+    height: 30px;
+    margin-left: 20%;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(13,110,253,255);
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;*/
+    color: rgba(255,255,255,255);
+    padding: auto;
+  }
+
+  button#btn-Comment:hover{
+    opacity: 0.8;
+  }
+
+   span.comment {
+    background: rgba(245,245,245,1);
+    border-radius: 9px;
+    padding: 5px;
+    margin-left: 20%;
+    width: 50%;
+    position: relative;
+  }
+
+   button.btn-del-com{
+    margin-left: 10px;
+    font-size: 10px;
+    margin-top: 1%;
+    position: absolute;
+    background-color: rgba(249,49,84,255);
+    color: white;
+    border: none;
+    border-radius:25%;
+  }
+
+   div.dtail-commenter {
+    margin: auto;
+    width: 55%;
+  }
+
+   span.commenter {
+    font-size: 12px;
+  }
+
+   button#btnEdit{
+    background-color: #39c0ed;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+   /* box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.195);*/
+  }
+
+   button.btn-delete{
+    background-color: rgba(249,49,84,255);
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    /*box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.195);*/
+  }
+
+   button.btn-is-found{
+    background-color: rgba(57,192,237,255);
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    /*box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.195);*/
+  }
+
+  button#btnEdit:hover,button.btn-delete:hover,button.btn-is-found:hover{
+    opacity: 0.8;
+  }
+
+
+  div.input-Movie-Name{
+    margin-left: 15%;
+    margin-top: 8px;
+    width: 30%;
+  }
+
+  .edit-post-detail{
+    margin-top: 10px ;
+  }
+
+  .input-edit-post{
+    /*setting same/similar as post-detail class*/
+    padding: 5px;
+    margin-left: 15%;
+    margin-bottom: 2px;
+    width: 70%;
+    display: block;
+    overflow: hidden;
+    resize: none;
+  }
+
+#btnOk-Edit-Post{
+  width: 5%;
+  height: 50%;
+  margin-left: 80%;
+}
+
+img#poster-profile{
+  width: 35px;
+  height: 35px;
+}
+
+div#btn-Group{
+  padding-left: 70%;
+  margin-top: 2%;
+}
+
+
+
+
+
+
+
+

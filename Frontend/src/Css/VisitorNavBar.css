@@ -1,0 +1,78 @@
+
+
+/* เรียงลำดับ tag ตามโค้ดของมันด้วย */
+
+nav#visitor-navbar {
+    background-color: rgba(255,255,255,255) ;
+    width: 100%;
+    margin:auto;
+}
+
+nav.navbar a {
+    color: black;
+}
+
+nav.navbar a:hover {
+    color: rgba(65,136,255,255) ;
+}
+
+nav.navbar img.website-logo-image{
+    margin-left: 20px;
+}
+
+nav.navbar a.navbar-brand{
+    margin: auto;
+}
+
+nav.navbar button.navbar-toggler span.navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+ul.nav {
+    margin: auto;
+    align-items: center;
+}
+
+button#btn-login{
+    width: 15vh;
+    height: 5vh;
+    color: #ffffff;
+    background-color: #5448c8;
+    border-radius: 999px;
+    border: none;
+}
+
+button#btn-login:hover{
+    opacity: 0.8;
+}
+
+li#visitor-topnav-item{
+    margin-left: 1rem;
+}
+
+input#visitor-topnav-search{
+    background-color: #f5f4f4;
+    width: 40vw;
+    height: 5vh;
+    margin: auto;
+    border-radius: 999px;
+    padding-left: 2vh;
+    border: none;
+    outline-color:#5448c8;
+}
+
+nav.navbar div.collapse ul.nav li.nav-item a.nav-link {
+    font-size: 18px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    color: white;
+}
+
+
+
+

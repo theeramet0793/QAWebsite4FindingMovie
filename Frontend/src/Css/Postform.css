@@ -1,23 +1,41 @@
 
 
   div.postForm {
-    margin-left: 25%;
-    margin-right: 25%;
-    padding-top:100px;
-    width: 50%;
-  }
-
-  div.postForm form.form-post div.area-space textarea.inputForm {
     width: 100%;
-    height: 125px;
   }
 
-  div.postForm form.form-post button.btn-inputForm {
-    margin-top: 8px;
-    margin-left: 42%;
+  form.form-post{
+    align-items: center;
+  }
+
+ textarea.inputForm {
+    width: 100%;
+    height: 175px;
+    background-color: rgba(255, 255, 255,255);
+    box-shadow: rgba(111, 115, 119, 0.2) 0px 8px 24px;
     border: none;
-    background-color: rgba(0,183,74,255);
-    color: white;
-    /*border-radius: 10px;*/
+    border-radius: 20px;
+    padding: 10px;
   }
 
+  textarea.inputForm:focus {
+    outline: none;
+  }
+
+
+   button#btn-inputForm {
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #f48024;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+  }
+
+  button#btn-inputForm:hover {
+  transform: scale(1.05) rotate(0deg);
+  opacity: 0.8;
+  }

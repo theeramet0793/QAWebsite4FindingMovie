@@ -1,36 +1,35 @@
-
+from flask_restful import Resource
 import collections
 import json
-from flask_restful import Resource
 import pymysql
 
 
 class GetAllComment(Resource):
     def get(self):
         #connect to database
-        conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-        myCursor = conn.cursor()
-        myCursor.execute("SELECT * FROM comment")
-        getAllcomment = myCursor.fetchall()
-        conn.commit()
-        conn.close()
+        connection = pymysql.connect(host='localhost', user='root', password='root',db='qadb')
+        mycursor = connection.cursor()
+        mycursor.execute("SELECT * FROM TblComment")
+        selected_rows = mycursor.fetchall()
+        connection.commit()
+        connection.close()
         #convert python object to json for comment
         rowarray_list = []
-        for row in getAllcomment:
+        for row in selected_rows:
             t = (row[0],row[1],row[2],row[3],row[4],row[5],row[6])
             rowarray_list.append(t)
-        k = json.dumps(rowarray_list)
+        json.dumps(rowarray_list)
 
         object_list = []
-        for row in getAllcomment:
+        for row in selected_rows:
             d = collections.OrderedDict()
-            d['CID'] = row[0]
-            d['PID'] = row[1]
-            d['body'] = row[2]
-            d['userID'] = row[3]
-            d['userName'] = row[4]
-            d['parentID'] = row[5]
-            d['createdAt'] = row[6]
+            d['CommentId'] = row[0]
+            d['CommentDetail'] = row[1]
+            d['PostId'] = row[2]
+            d['CommenterId'] = row[3]
+            d['CreatedAt'] = row[4]
+            d['LastUpdate'] = row[5]
+            d['IsDeleted'] = row[6]
             object_list.append(d)
         k = json.dumps(object_list)
         return json.loads(k)

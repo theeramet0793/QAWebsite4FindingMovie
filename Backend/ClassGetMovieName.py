@@ -5,27 +5,27 @@ import pymysql
 
 
 class GetMovieName(Resource):
-    def get(self,postID): 
+    def get(self,movie_id): 
         #connect to database
-        conn = pymysql.connect(host='localhost', user='root', password='',db='qadb')
-        myCursor = conn.cursor()
-        myCursor.execute("SELECT * FROM moviename WHERE PID = %s",postID)
-        getsomepost = myCursor.fetchall()
-        conn.commit()
-        conn.close()
+        connection = pymysql.connect(host='localhost', user='root', password='root',db='qadb')
+        mycursor = connection.cursor()
+        mycursor.execute("SELECT * FROM TblMovie WHERE MovieId = %s",movie_id)
+        selected_rows = mycursor.fetchall()
+        connection.commit()
+        connection.close()
          #convert python object to json for post
         rowarray_list = []
-        for row in getsomepost:
+        for row in selected_rows:
             t = (row[0],row[1],row[2])
             rowarray_list.append(t)
-        j = json.dumps(rowarray_list)
+        json.dumps(rowarray_list)
 
         object_list = []
-        for row in getsomepost:
+        for row in selected_rows:
             d = collections.OrderedDict()
-            d['id'] = row[0]
-            d['PID'] = row[1]
-            d['movieName'] = row[2]
+            d['MovieId'] = row[0]
+            d['MovieName'] = row[1]
+            d['MovieType'] = row[2]
             object_list.append(d)
         j = json.dumps(object_list)
         return json.loads(j)

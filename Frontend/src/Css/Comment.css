@@ -1,0 +1,30 @@
+
+.comment-container{
+    display: flex;
+    justify-content: left;
+    margin-top: 2%;
+}
+
+.commenter-profile{
+    width: 5%;
+    margin-left: 2%;
+}
+
+.comment-detail-container{
+    background-color: rgb(215, 226, 235);
+    border-radius: 5px;;
+    width: 90%;
+    padding: 1%;
+}
+
+.post-img-commenter-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.commenter-detail{
+    font-size: small;
+    font-weight: 600;
+    color: #656769;
+}
+

@@ -1,0 +1,16 @@
+
+div.Card-slide-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.card{
+    width:18%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 210px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

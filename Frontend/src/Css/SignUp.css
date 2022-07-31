@@ -1,68 +1,88 @@
 
 
-div.test {
-  margin-top: 90px;
+div.signup-page{
+  height: 100%;
+  height: 100vh;
+  background-color:  rgba(248,249,250,255);
 }
 
-div.test div.container {
+div.signup-modal {
+  align-items: center;
+  padding-top: 140px;
+  margin: auto;
+  width: 40%;
+  min-width: 500px;
+}
+
+form.form-signup {
+  text-align: center;
+}
+
+div.container {
   padding: 16px;
+  background-color: rgba(255,255,255,255) ;
+  border-radius: 29px;
+  box-shadow: rgba(111, 115, 119, 0.2) 0px 8px 24px;
 }
 
-div.test div.container hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+div.signup-title {
+  font-size: 23px;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+  color: #f48024;
+  text-shadow: center ;
 }
 
-div.test div.container div.container2 input.signUp-email{
-  width: 100%;
+div.signup-description {
+  font-size: 13px;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+ div.container hr {
+  border: 1px solid ;
+}
+
+input.signUp-username, input.signUp-email, input.signUp-password, input.signUp-repeatPassword{
+  width: 60%;
+  height: 30px;
   padding: 15px;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
-  background-color: #ddd;
-  outline: none;
+  border-radius: 5px;
+  background-color: rgba(248,249,250,255);
+  outline-color: #f48024;
+  margin-top: 3%;
 }
 
-div.test div.container div.container3 input.signUp-password{
-  width: 100%;
-  padding: 15px;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  background-color: #ddd;
-  outline: none;
+button.cancelbtn {
+    font-size: 17px;
+    padding: auto;
+    border-radius: 19px;
+    color: #000000;
+    background-color: #bcbbbb;
+    width: 60%;
+    height: 30px;
+    border: none;
 }
 
-div.test div.container div.container4 input.signUp-repeatPassword{
-  width: 100%;
-  padding: 15px;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  background-color: #ddd;
-  outline: none;
-}
-
-div.test div.container div.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-div.test div.container div.clearfix button.cancelbtn {
-    padding: 14px 20px;
-    background-color: rgba(249,49,84,255);
-    float: left;
-    width: 50%;
-}
-
-div.test div.container div.clearfix button.signupbtn {
-    padding: 14px 20px;
-    background-color: rgba(0,183,74,255);
-    float: left;
-    width: 50%;
+button.signupbtn {
+    font-size: 17px;
+    padding: auto;
+    border-radius: 19px;
+    color: white;
+    background-color: #f48024;
+    width: 60%;
+    height: 30px;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
   
+button.signupbtn:hover, button.cancelbtn:hover {
+  opacity: 0.8;
+  transform: scale(1.05) rotate(0deg);
+}
 
 
   

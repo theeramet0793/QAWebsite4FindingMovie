@@ -1,36 +1,35 @@
 import './Css/App.css'
 import './Css/Postform.css'
-import './Css/Navbar.css'
 import './Css/SignUp.css'
-import './Css/Login.css'
-import './Css/Posts.css'
-import './Css/SolvedPost.css'
-import './Css/Page2.css'
-import './Css/Page3.css'
-import NavBar from './navbar/NavBar'
-import Home from './home/home'
-import Page2 from './page2/page2'
-import Page3 from './page3/page3'
-import SolvedPost from './posts/solvePost'
-import Posts from './posts/posts'
-import SignUp from './signUp/signUp'
-import Login from './login/login'
+import './Css/SignIn.css'
+import './Css/UnsolvedPosts.css'
+import './Css/SolvedPosts.css'
+import './Css/UserSidebar.css'
+import './Css/Forum.css'
+import SolvedPosts from './components/solvedPost'
+import UnsolvedPosts from './components/unsolvedPosts'
+import SignUp from './components/signUp'
+import SignIn from './components/signIn'
+import Forum from './pages/forum'
 import { Route, Routes } from 'react-router-dom';
+import NavBars from './components/NavBar/NavBars'
 
 
 const App = () => {
-  return (
-    <div>
-      <NavBar/>
-      <Routes>
-        <Route exact path="/home" element={<Home/>} />
-        <Route exact path="/page2" element={<SignUp/>} />
-        <Route exact path="/page3" element={<Login/>} />
-        <Route exact path="/solvedPost" element={<SolvedPost/>} />
-        <Route exact path="/posts" element={<Posts/>} />
-      </Routes>
-    </div>
-  );
+
+    return (
+      <div className="App">
+        <NavBars/>
+        <Routes>
+            <Route exact path="/forum" element={<Forum/>} />
+            <Route exact path="/signUp" element={<SignUp/>} />
+            <Route exact path="/signIn" element={<SignIn/>} />
+            <Route exact path="/solvedPost" element={<SolvedPosts/>} />
+            <Route exact path="/posts" element={<UnsolvedPosts/>} />
+        </Routes>
+      </div>
+    );
+  
 };
 
 
